@@ -22,3 +22,13 @@ def pop_arr(arr, how_many)
   end
   return returned.reverse
 end
+
+def sorting_arrays(arr)
+  new_arr = []
+  x = arr.length
+  until new_arr.length == x
+    new_arr << arr.min
+    arr.delete(arr.min)
+  end
+  return new_arr
+end

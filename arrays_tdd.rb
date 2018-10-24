@@ -19,4 +19,8 @@ class Testing_arrays_pop_sort < Minitest::Test
     arr = ["b", "a", "c"]
     assert_equal(["a","b","c"], sorting_arrays(arr))
   end
+  def test_sorting_arrays_2
+    arr = [5, 7, 1, 4]
+    assert_equal([1, 4, 5, 7], sorting_arrays(arr))
+  end
 end
