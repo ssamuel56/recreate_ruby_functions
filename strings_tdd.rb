@@ -18,8 +18,12 @@ class Testing_strings_split_and_center < Minitest::Test
     string = "This is a string!"
     assert_equal("     This is a string!     ", my_center(string, 10))
   end
-  def test_for_center_if_odd_number_is_given
+  def test_for_center_if_number_less_than_length_is_given
     string = "String with 123 numbers"
     assert_equal("String with 123 numbers", my_center(string, 3))
+  end
+  def test_for_center_if_odd_number_is_given
+    string = "String with 123 numbers"
+    assert_equal("String with 123 numbers", my_center(string, 63))
   end
 end
