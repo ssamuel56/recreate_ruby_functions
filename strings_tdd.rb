@@ -26,4 +26,8 @@ class Testing_strings_split_and_center < Minitest::Test
     string = "String with 123 numbers"
     assert_equal("String with 123 numbers", my_center(string, 63))
   end
+  def test_for_center_if_own_character_is_given
+    string = "String with 123 numbers"
+    assert_equal("............String with 123 numbers............", my_center(string, 24, "."))
+  end
 end
