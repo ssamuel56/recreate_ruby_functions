@@ -14,8 +14,8 @@ class Testing_strings_split_and_center < Minitest::Test
     string = "aboy78yy"
     assert_equal(["a", "b", "o", "y", "7", "8", "y", "y"], my_split(string, ""))
   end
-  def test_for_my_center
+  def test_for_my_center_10_blank_spaces
     string = "This is a string!"
-    assert_equal(" ", my_center(string))
+    assert_equal("     This is a string!     ", my_center(string, 10))
   end
 end

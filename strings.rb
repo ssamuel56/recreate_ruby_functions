@@ -26,5 +26,12 @@ def my_split(string, my_split_by)
   return arr
 end
 
-def my_center(string, char = " ")
+def my_center(string, ammount, char = " ")
+  if ammount % 2 == 0
+    string.prepend char * (ammount / 2)
+    string << char * (ammount / 2)
+    return string
+  else
+    puts "Sorry you cant do this with odd numbers"
+  end
 end
