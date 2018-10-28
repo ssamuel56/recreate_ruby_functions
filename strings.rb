@@ -25,3 +25,6 @@ def my_split(string, my_split_by)
 
   return arr
 end
+
+def my_center(string, char = " ")
+end
