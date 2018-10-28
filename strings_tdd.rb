@@ -8,6 +8,6 @@ class Testing_strings_split_and_center < Minitest::Test
   end
   def test_for_split_numbers_w_commas
     string = "1,5,6,7,8"
-    assert_equal([], my_split(string, ","))
+    assert_equal(["1", "5", "6", "7", "8"], my_split(string, ","))
   end
 end
