@@ -30,8 +30,9 @@ def my_center(string, ammount, char = " ")
   if ammount % 2 == 0
     string.prepend char * (ammount / 2)
     string << char * (ammount / 2)
-    return string
+  elsif ammount < string.length
   else
     puts "Sorry you cant do this with odd numbers"
   end
+  return string
 end
