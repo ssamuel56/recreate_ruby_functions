@@ -15,4 +15,14 @@ class Testing_hashes_merge_and_replace < Minitest::Test
     hash_2 = {:dog => "Rover"}
     assert_equal({:fruit=>["apples", "oranges"], :veggies=>["broccoli", "spinach"], :dog=>"Rover"}, my_merge(hash_1, hash_2))
   end
+  def test_replace_on_basic_hashes
+    hash_1 = {:key_1 => "value1"}
+    hash_2 = {:key_2 => "value2"}
+    assert_equal(hash_2, my_replace(hash_1, hash_2))
+  end
+  def test_replace_with_bigger_hash
+    hash_1 = {:key_1 => "value1"}
+    hash_2 = {:fruit => ["apples", "oranges"], :veggies => ["broccoli", "spinach"]}
+    assert_equal({:fruit=>["apples", "oranges"], :veggies=>["broccoli", "spinach"]}, my_replace(hash_1, hash_2))
+  end
 end
